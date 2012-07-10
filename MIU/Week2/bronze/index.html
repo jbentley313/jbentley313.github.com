@@ -1,0 +1,92 @@
+<!doctype html>  
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>Recipe Keeper!</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<link rel="stylesheet" href="css/recipeform.css"/>
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+
+	<div data-role="page" id="home">
+
+		<!-- header -->
+		<div data-role="header" data-position="fixed">
+			<h1>Recipe Keeper</h1>
+		</div>
+
+		<!-- content with cta link and image-->
+		<div data-role="content" data-theme="a" img>
+			<h2>Your Mobile Cookbook!</h2>
+			<h2><a href="additem.html" data-role="button" data-icon="plus" data-iconpos="right" data-theme="e" data-ajax="false">Add a Recipe Now!</a></h2>
+		</div>
+
+		<!-- navigation (browse) list -->
+		<ul data-role="listview" data-filter="true" data-filter-placeholder="Search Recipes..." >
+			<li data-role="list-divider" >Browse Recipes by...</li>
+			<li><a href="#add">
+				<h3>Chicken</h3>
+			</a></li>
+			<li><a href="#add">
+				<h3>Beef</h3>
+			</a></li>
+			<li><a href="#add">
+				<h3>Pork</h3>
+			</a></li>
+			<li><a href="#add">
+				<h3>Veggie</h3>
+			</a></li>
+			<li><a href="#add">
+				<h3>Seafood</h3>
+			</a></li>
+		</ul>
+
+		<!-- footer for future development -->
+		<!-- <div data-role="footer" data-position="fixed">
+			<h4>Footer</h4>
+		</div> -->
+
+	</div>
+
+	<!-- generic landing page (for now) -->
+	<div data-role="page" id="add" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h1>Recipe Keeper</h1>
+		</div>
+
+		<div data-role="content">
+			<p>This content is coming soon!</p>
+			
+		</div>
+
+		<!-- footer for future development -->
+		<!-- <div data-role="footer" data-position="fixed">
+			<h4>Footer</h4>
+		</div> -->
+
+	</div>
+	
+
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+	<script type="text/javascript" src="js/main.js></script>
+</body>
+</html>
