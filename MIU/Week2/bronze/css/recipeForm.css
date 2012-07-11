@@ -5,6 +5,15 @@ body{
 	background:#A67425;
 }
 
+.my_icon_wrapper {
+        float: left; 
+        width: 50px; height: 50px;
+        text-align:center;
+        vertical-align: middle; 
+        margin: 3px -12px -15px -10px;
+        padding-right:15px;
+}
+
 #home p {
 	text-align:center;
 	font-family:Tahoma, "Geneva", sans-serif;
@@ -19,9 +28,7 @@ body{
 
 }
 
-/*#items ul #ele ul #dL a{
-	margin-top:30px;
-}*/
+
 
 #ele{
 	border-bottom:1px solid black;
