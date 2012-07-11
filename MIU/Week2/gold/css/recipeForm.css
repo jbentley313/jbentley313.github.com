@@ -14,6 +14,10 @@ body{
         padding-right:15px;
 }
 
+#home p {
+	text-align:center;
+	font-family:Tahoma, "Geneva", sans-serif;
+}
 
 #items{
 	font-style:bold;
