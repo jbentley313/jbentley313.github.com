@@ -29,13 +29,14 @@
 		
 
 		<!-- content with cta link and image-->
-		<div data-role="content" data-theme="a" img>
+		<div data-role="content" data-theme="a">
 			<h2>Your Mobile Cookbook!</h2>
 			<h2><a href="additem.html" data-role="button" data-icon="plus" data-iconpos="right" data-theme="e" data-ajax="false">Add a Recipe Now!</a></h2>
 		</div>
 
 		<!-- navigation (browse) list -->
-		<ul data-role="listview" data-filter="true" data-filter-placeholder="Search Recipes..." >
+		<div data-role="content" data-theme="a">
+		<ul data-role="listview" data-filter="true" data-filter-placeholder="Search Recipes..." data-theme="d">
 			<li data-role="list-divider" >Browse Recipes by...</li>
 			<li><a href="#add">
 				<h3>Chicken</h3>
@@ -53,6 +54,7 @@
 				<h3>Seafood</h3>
 			</a></li>
 		</ul>
+		</div>
 
 		<!-- footer navbar-->
 		<div data-role="footer" data-position="fixed">
