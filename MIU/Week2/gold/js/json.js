@@ -1,6 +1,6 @@
 //Jason Bentley
-//VFW 1206 
-//Project 4
+//MiU 1207 
+//Project 2
 
 var json = {
 	"Recipe1" : {
