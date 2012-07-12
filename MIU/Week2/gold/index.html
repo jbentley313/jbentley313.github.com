@@ -38,31 +38,31 @@
 		<div data-role="content" data-theme="a">
 			<ul data-role="listview" data-filter="true" data-filter-placeholder="Search Recipes..." data-theme="c">
 				<li data-role="list-divider">Browse Recipes by...</li>
-				<li><a href="#add">
+				<li><a href="#add" data-transition="slide">
 					<p class="my_icon_wrapper">
 						<img src="images/chickenIconSmall.png">
 						<h3>Chicken</h3>
 					</p>
 				</a></li>
-				<li><a href="#add">
+				<li><a href="#add" data-transition="slide">
 					<p class="my_icon_wrapper">
 						<img src="images/beefIconSmall.png">
 						<h3>Beef</h3>
 					</p>
 				</a></li>
-				<li><a href="#add">
+				<li><a href="#add" data-transition="slide">
 					<p class="my_icon_wrapper">
 						<img src="images/porkIconSmall.png">
 						<h3>Pork</h3>
 					</p>
 				</a></li>
-				<li><a href="#add">
+				<li><a href="#add"data-transition="slide">
 					<p class="my_icon_wrapper">
 						<img src="images/veggieIconSmall.png">
 						<h3>Veggie</h3>
 					</p>
 				</a></li>
-				<li><a href="#add">
+				<li><a href="#byDate" data-transition="slide">
 					<p class="my_icon_wrapper">
 						<img src="images/dateIcon.png">
 						<h3>Date Added</h3>
@@ -72,12 +72,12 @@
 		</div>
 
 		<!-- footer navbar-->
-		<div data-role="footer" data-position="fixed">
+		<div data-role="footer" data-position="fixed" data-id="home">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#home" data-icon="home">Home</a></li>
-					<li><a href="http://jbentley313.github.com/MIU/Week2/bronze/index.html" data-icon="alert">Bronze App</a></li>
-					<li><a href="http://github.com/jbentley313/gh-pages.git" data-icon="grid">GH-Pages</a></li>
+					<li><a href="../bronze/index.html" data-icon="alert">Bronze App</a></li>
+					<li><a href="#git" data-icon="grid">GH-Pages</a></li>
 				</ul>
 
 			</div>
@@ -97,12 +97,62 @@
 			
 		</div>
 
-		<div data-role="footer" data-position="fixed">
+		<div data-role="footer" data-position="fixed" data-id="home">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#home" data-icon="home">Home</a></li>
-					<li><a href="http://jbentley313.github.com/MIU/Week2/bronze/index.html" data-icon="alert">Bronze App</a></li>
-					<li><a href="http://github.com/jbentley313/gh-pages.git" data-icon="grid">GH-Pages</a></li>
+					<li><a href="..//bronze/index.html" data-icon="alert">Bronze App</a></li>
+					<li><a href="#git" data-icon="grid">GH-Pages</a></li>
+				</ul>
+
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Recipe By Date Page-->
+	<div data-role="page" id="byDate" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h1>Recipe Keeper</h1>
+		</div>
+
+		<div data-role="content">
+			<p>sasdasdasdas coming soon!</p>
+			
+		</div>
+
+		<div data-role="footer" data-position="fixed" data-id="home">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="..//bronze/index.html" data-icon="alert">Bronze App</a></li>
+					<li><a href="#git" data-icon="grid">GH-Pages</a></li>
+				</ul>
+
+			</div>
+		</div>
+
+	</div>
+
+	<!-- GH-Pages Page-->
+	<div data-role="page" id="git" data-add-back-btn="true">
+
+		<div data-role="content">
+			<p>Versions of Recipe Keeper!</p>
+			<div class="ui-grid-b">
+				<div class="ui-block-a"><a href="http://jbentley313.github.com/MIU/Week2/gold/index.html"  data-ajax="false"><img src="images/miu2.png"><br>Week 2</a></div>
+				<div class="ui-block-b"><a href="#add"><img src="images/miu3.png">     Week 3</a></div>
+				<div class="ui-block-c"><a href="#add"><img src="images/miu4.png">     Week 4</a></div>
+			</div>	
+		</div>
+
+		<div data-role="footer" data-position="fixed" data-id="home">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="..//bronze/index.html" data-icon="alert">Bronze App</a></li>
+					<li><a href="#git" data-icon="grid">GH-Pages</a></li>
 				</ul>
 
 			</div>
