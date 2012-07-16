@@ -1,0 +1,132 @@
+/*Jason Bentey
+MiU 1207 
+Project 2*/
+body{
+	background:#A67425;
+}
+
+.my_icon_wrapper {
+        float: left; 
+        width: 50px; height: 50px;
+        text-align:center;
+        vertical-align: middle; 
+        margin: 3px -12px -15px -10px;
+        padding-right:15px;
+}
+
+#home p {
+	text-align:center;
+	font-family:Tahoma, "Geneva", sans-serif;
+}
+
+#items{
+	font-style:bold;
+	border: 1px solid black;
+	background: #FFC973;
+	padding-left:5%;
+
+
+}
+
+
+
+#ele{
+	border-bottom:1px solid black;
+	margin-left:-40px;
+	margin-right:20px;
+	margin-top:10px;
+
+
+}
+#dL   {
+	margin-top:10px;
+	margin-bottom:5px;
+
+}
+label{
+	display: block;
+}
+
+/*h1 {
+	font-family: Arial, "MS Trebuchet", sans-serif;
+	padding: 4px;
+	border: 1px solid black;
+	background: #FFC973;
+	text-align:center;	
+}*/
+
+h2 {
+	text-align:center;	
+}
+
+
+
+a {
+ padding: 2px;
+ margin-top:5px;
+ /*text-decoration: none;*/
+ /*background-color: #BFA170;*/
+ color:black;
+ /*margin-right:20px;*/
+ 
+ }
+ 
+body>a{
+	
+	font-size:30px;
+	text-align:center;
+	border:1px solid black;
+	color:#FFC973;
+	margin-left:20px;
+	padding:10px;	
+}
+
+/*div img {
+        height:100%;
+        width: 100%;
+        max-width:100%;
+        max-height:100%;
+    }*/
+
+label {
+	font-family:  Arial, "MS Trebuchet", sans-serif;
+}
+
+.meal {
+	display: inline;
+	font-style:bold;
+}
+
+.space {
+	font-style:bold;
+	margin-top:4px;
+	font-family:  Arial, "MS Trebuchet", sans-serif;
+}
+
+ul {
+	list-style-type:none;
+}
+
+.info {
+	background: #FFC973;
+	padding-top:6px;
+	border: 1px solid #999;
+}
+
+#submit {
+	margin-bottom:2px;
+}
+
+span {
+	position: absolute;
+	font-style:bold;
+	font-family:  Arial, "MS Trebuchet", sans-serif;
+	padding-top:4px;
+}
+
+#ele ul  #dL a{
+	
+	display:block;
+	border:solid gray; width:94px;
+
+}

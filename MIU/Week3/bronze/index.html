@@ -1,0 +1,142 @@
+<!-- MiU Project 2 Bronze App Term 1207 -->
+<!doctype html>  
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>Recipe Keeper!</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<link rel="stylesheet" href="css/recipeForm.css"/>
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+
+	<div data-role="page" id="home">
+
+		
+
+		<!-- content with cta link and image-->
+		<div data-role="content" data-theme="a">
+			<h2>Your Mobile Cookbook!</h2>
+			<h2><a href="additem.html" data-role="button" data-icon="plus" data-iconpos="right" data-theme="e" data-ajax="false">Add a Recipe Now!</a></h2>
+		</div>
+
+		<!-- navigation (browse) list -->
+		<div data-role="content" data-theme="a">
+			<div data-role="list-divider">Browse Recipes by...</div>
+			<div data-role="collapsible" data-theme="c">
+				<h3>Chicken</h3>
+				<p>Recipes Coming Soon!</p>
+			</div>
+
+			<div data-role="collapsible" data-theme="c">
+				<h3>Beef</h3>
+				<p>Recipes Coming Soon!</p>
+			</div>
+
+			<div data-role="collapsible" data-theme="c">
+				<h3>Pork</h3>
+				<p>Recipes Coming Soon!</p>
+			</div>
+
+			<div data-role="collapsible" data-theme="c">
+				<h3>Veggie</h3>
+				<p>Recipes Coming Soon!</p>
+			</div>
+
+			<div data-role="collapsible" data-theme="c">
+				<h3>Date Added</h3>
+				<p>Recipes Coming Soon!</p>
+			</div>	
+
+		</div>
+
+		<!-- footer navbar-->
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="..//bronze/index.html" data-icon="alert">Bronze App</a></li>
+					<li><a href="#git" data-icon="grid">GH-Pages</a></li>
+				</ul>
+
+			</div>
+		</div>
+
+	</div>
+
+	<!-- generic landing page (for now) -->
+	<div data-role="page" id="add" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h1>Recipe Keeper</h1>
+		</div>
+
+		<div data-role="content">
+			<p>This content is coming soon!</p>
+			
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="..//bronze/index.html" data-icon="alert">Bronze App</a></li>
+					<li><a href="#git" data-icon="grid">GH-Pages</a></li>
+				</ul>
+
+			</div>
+		</div>
+
+	</div>
+
+	<!-- GH-Pages Page-->
+	<div data-role="page" id="git" data-add-back-btn="true" data-theme="a">
+
+		<div data-role="content">
+			<div data-role="header" data-position="fixed">
+			<h3>Versions of<br>Recipe Keeper</h3>
+		</div>
+			<div class="ui-grid-b">
+				<div class="ui-block-a"><a href="http://jbentley313.github.com/MIU/Week2/gold/index.html"  data-ajax="false"><img src="images/miu2.png"><br>Week 2</a></div>
+				<div class="ui-block-b"><a href="#add"><img src="images/miu3.png"><br>Week 3</a></div>
+				<div class="ui-block-c"><a href="#add"><img src="images/miu4.png"><br>Week 4</a></div>
+			</div>	
+		</div>
+
+		<div data-role="footer" data-position="fixed" data-id="home">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="..//bronze/index.html" data-icon="alert">Bronze App</a></li>
+					<li><a href="#git" data-icon="grid">GH-Pages</a></li>
+				</ul>
+
+			</div>
+		</div>
+
+	</div>
+
+	
+	
+
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+	<script type="text/javascript" src="js/main.js></script>
+</body>
+</html>
