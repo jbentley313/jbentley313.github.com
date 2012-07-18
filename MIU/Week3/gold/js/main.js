@@ -1,38 +1,54 @@
 //Jason Bentley
 //MiU 1207 
-//Project 2
+//Project 3
+
+
+
 
 //Wait until the DOM is ready
-window.addEventListener("DOMContentLoaded", function(){
+$(document).bind("pageinit", function(){
 
+	var arform = $("#addRecipeForm");
+	arform.validate({
+		invalidHandler: function(form, validator){
+			
+		},
+		submitHandler: function(){
+			var data = arform.serializeArray();
+			parseRecipeForm(data);
 
-
-
+		}
+	});
+	
 	//Get ElementById function
 	function gE(x){
 		var theElement = document.getElementById(x);
 		return theElement;
 	}
 
-
-	//Create select field element and populate with options
-	function makeCats() {
-		var formTag = document.getElementsByTagName("form"),
-			selectLi = gE("select"),
-			makeSelect = document.createElement("select");
-			makeSelect.setAttribute("id", "groups");
-		for(var i=0, j=mealType.length; i<j; i++){
-			var makeOption = document.createElement("option");
-			var optText = mealType[i];
-			makeOption.setAttribute("value", optText);
-			makeOption.innerHTML = optText;
-			makeSelect.appendChild(makeOption);
-		}
-		selectLi.appendChild(makeSelect);
-	}
+// function toggleControls(n){
+// 		switch(n){
+// 			case "on":
+// 				gE("addRecipeForm").style.display = "none";
+// 				gE("clear").style.display = "inline";
+// 				gE("display").style.display = "none";
+// 				gE("addNew").style.display = "inline";
+// 				break;
+// 			case "off":
+// 				gE("addRecipeForm").style.display = "block";
+// 				gE("clear").style.display = "inline";
+// 				gE("display").style.display = "inline";
+// 				gE("addNew").style.display = "none";
+// 				gE("items").style.display = "none";
+// 				break;
+// 			default:
+// 				return false;
+// 		}
+// 	}
+	
 
 	function getCheckboxValues(){
-		 	var	checkBoxes = document.forms[0].mealTime;
+		 	var	checkBoxes = $("mealTime");
 				tcheckedBoxes = [];
 		for(var i=0; i<checkBoxes.length; i++){
 			if(checkBoxes[i].checked){
@@ -41,26 +57,9 @@ window.addEventListener("DOMContentLoaded", function(){
 			}	
 		}
 	}
+	
 
-	function toggleControls(n){
-		switch(n){
-			case "on":
-				gE("recipeForm").style.display = "none";
-				gE("clear").style.display = "inline";
-				gE("display").style.display = "none";
-				gE("addNew").style.display = "inline";
-				break;
-			case "off":
-				gE("recipeForm").style.display = "block";
-				gE("clear").style.display = "inline";
-				gE("display").style.display = "inline";
-				gE("addNew").style.display = "none";
-				gE("items").style.display = "none";
-				break;
-			default:
-				return false;
-		}
-	}
+	
 
 	function storeData(key){
 		//if no key, means brand new item that needs a key
@@ -85,9 +84,10 @@ window.addEventListener("DOMContentLoaded", function(){
 		//Save data into Local Storage: Use Stringify to convert the object to a string.
 		localStorage.setItem(id, JSON.stringify(item));
 		alert("Recipe Saved!");
+
 	}
 	function getData(){
-		toggleControls("on");
+		// toggleControls("on");
 		if(localStorage.length === 0){
 			alert("There are no recipes to display! Default Data has been populated!");
 			autoFillData();			
@@ -123,7 +123,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			makeItemLinks(localStorage.key(i), linksLi); //Create edit and delete buttons for each item
 		} 
 	}
-	//get image for catefory
+	//get image for category
 	function getImage(catName, makeSublist){
 		var imageLi = document.createElement("li");
 		makeSublist.appendChild(imageLi);
@@ -138,6 +138,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		for(var n in json){
 			var id = Math.floor(Math.random()*100000001);
 			localStorage.setItem(id, JSON.stringify(json[n]));
+
 		}
 	}
 	//Make Item Links
@@ -175,7 +176,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		var item = JSON.parse(value);
 
 		//Show form
-		toggleControls("off");
+		// toggleControls("off");
 
 		//Populate form fields w/current lstorage vals
 		gE("groups").value = item.groups[1];
@@ -185,7 +186,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		gE("directions").value = item.directions[1];
 		
 		var placeValues = function(){
-			var checkboxes = document.forms[0].mealTime;
+			var checkboxes = $("mealTime");
 			for(i=0, j=checkboxes.length; i<j; i++){
 				for(n=0, m=item.checks[1].length; n<m; n++){
 					if(checkboxes[i].value === item.checks[1][n]){
@@ -230,76 +231,29 @@ window.addEventListener("DOMContentLoaded", function(){
 		}
 	}
 
-	function validate(e){
-		//define elements we want to check
-		var getGroup = gE("groups");
-		var getRecipeName = gE("recipename");
-		var getDirections = gE("directions");
-
-		//Reset Error Messages
-		errMsg.innerHTML = "";
-		getGroup.style.border ="1px solid black";
-		getRecipeName.style.border ="1px solid black";
-		getDirections.style.border ="1px solid black";
-
-		//Get error messages
-		var messageAry = [];
-
-		//recipe name val
-		if(getRecipeName.value === ""){
-			var recipeNameError = "Please enter a recipe name."
-			getRecipeName.style.border ="1px solid red";
-			messageAry.push(recipeNameError);
-		}
-
-		//group val
-		if(getGroup.value === "--Select--"){
-			var groupError = "Please select type of dish.";
-			getGroup.style.border ="1px solid red";
-			messageAry.push(groupError);
-		}
-
-		//directions val
-		if(getDirections.value === ""){
-			var directionTxtsError = "Please enter the recipe directions.";
-			getDirections.style.border ="1px solid red";
-			messageAry.push(directionTxtsError);
-		}
-
-		//if errors present, then display them on the screen.
-		if(messageAry.length >= 1){
-			for(var i=0, j=messageAry.length; i < j; i++){
-				var txt = document.createElement("li");
-				txt.innerHTML = messageAry[i];
-				errMsg.appendChild(txt);
-			}
-			e.preventDefault();
-			return false;
-		}else{
-			//all good = then save the data
-			//send key value (from editData func)
-			storeData(this.key);
-		}
-
-	}
+	
 
 	//Variable Defaults
-	var mealType = ["--Select--", "Chicken", "Beef", "Pork", "Veggie"],
-		tcheckedBoxes,
-		errMsg = gE("errors")
+	var tcheckedBoxes
 	;
+	var parseRecipeForm = function(data){
+		//uses form data here
+		console.log(data);
+		storeData();
 
-	makeCats();
+	};
+	
 
 	//Set Link and Submit Click Events
 	var displayLink = gE("display");
 	displayLink.addEventListener("click", getData);
 	var clearLink = gE("clear");
 	clearLink.addEventListener("click", clearLocal);
-	var save = gE("submit");
-	save.addEventListener("click", validate);
+	// var save = gE("submit");
+	// save.addEventListener("click", validate);
 
 
 
+	
 });
 

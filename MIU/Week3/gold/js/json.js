@@ -4,7 +4,7 @@
 
 var json = {
 	"Recipe1" : {
-		"recipename": ["Recipe Name: ", "Chicken Crescents"] ,
+		"recipename": ["Recipe Name: ", "Chicken Crescents"],
 		"groups": ["Group: ", "Chicken"],
 		"rating": ["Rating: ", "10"],
 		"date": ["Date Added: ", "2011-06-17"],
@@ -164,4 +164,4 @@ var json = {
 		"directions": ["Directions: ", "Cook some pizza bites."]
 	}
 
-}
+};

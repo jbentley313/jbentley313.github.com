@@ -17,3 +17,4 @@ Project 4*/
 	font-family:Tahoma, "Geneva", sans-serif;
 }
 
+label.error {display: block;margin:10px 0px; color:#cc0000;}

@@ -18,6 +18,8 @@
 	<!-- StyleSheets under here -->
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
 	<link rel="stylesheet" href="css/recipeForm.css"/>
+	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.min.css" /> 
 	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
@@ -32,8 +34,15 @@
 		<!-- content with cta link and image-->
 		<div data-role="content" data-theme="a">
 			<h2>Your Mobile Cookbook!</h2>
-			<h2><a href="additem.html" data-role="button" data-icon="plus" data-iconpos="right" data-theme="e">Add a Recipe Now!</a></h2>
+			<h1><a href="#addRecipe" data-role="button" id="addNew" data-icon="plus" data-iconpos="right" data-theme="e">Add a Recipe Now!</a></h1>
+
+			<h4><a href="#" data-role="button" id="display">My Recipe Book</a></h4>
+			<h4><a href="#" data-role="button" id="clear">Delete All Recipes</a></h4>
+
 		</div>
+
+
+
 
 		<!-- navigation (browse) list -->
 		<div data-role="content" data-theme="a">
@@ -283,11 +292,93 @@
 		</div>
 
 	</div>
+
+
+
+	<!-- Recipe Form -->
+	<div data-role="page" id="addRecipe" data-add-back-btn="true" data-theme="b">
+
+	<div data-role="header" data-position="fixed">
+		<h1>Add Recipe</h1>
+	</div>
+
+	<div data-role="content">
+
+		<form action="" method="post" id="addRecipeForm">
+
+			<div data-role="fieldcontain">
+				<label for="recipename">Recipe Name:</label>
+				<input type="text" name="recipename" id="recipename" class="required"/>			
+			</div>
+
+			<div data-role="fieldcontain">
+				<label for="rating">Recipe Rating:</label>
+				<input type="range" name="rating" id="rating" value="10" min="0" max="10" />	
+			</div>
+
+			<div data-role="fieldcontain">
+				<label for="groups">Meal Type</label>
+				<select name="groups" id="groups" data-native-menu="false"  data-theme="c"  class="required">
+					<option data-placeholder="true" value>Please Select One</option>
+					<optgroup label="Meal Type:">
+						<option value="Chicken">Chicken</option>
+						<option value="Beef">Beef</option>
+						<option value="Pork">Pork</option>
+						<option value="Veggie">Veggie</option>
+					</optgroup>
+				</select>
+			</div>
+
+			<div data-role="fieldcontain">
+				<label for="date">Some Date</label>
+				<input name="date" id="date" type="date" data-role="datebox" data-options='{"mode": "calbox"}'>	
+			</div>
+
+			
+
+			<div data-role="fieldcontain">
+				<fieldset data-role="controlgroup">
+					<legend>Meal Time:</legend>
+					<input type="checkbox" value="appetizer" name="mealTime" id="appetizer"/>
+					<label for="appetizer">Appetizer</label>
+					<input type="checkbox" value="breakfast" name="mealTime" id="breakfast"/>
+					<label for="breakfast">Breakfast</label>
+					<input type="checkbox" value="lunch" name="mealTime" id="lunch"/>
+					<label for="lunch">Lunch</label>
+					<input type="checkbox" value="dinner" name="mealTime" id="dinner"/>
+					<label for="dinner">Dinner</label>
+				</fieldset>		
+			</div>
+
+			
+
+			<div data-role="fieldcontain" >
+				<label for="directions">Directions:</label>
+				<textarea name="directions" id="directions" class="required"></textarea >
+			</div>
+			
+
+			<div data-role="fieldcontain">
+				<input type="submit" value="Save Recipe" data-theme="b"/>
+				<input type="reset" value="Reset" data-theme="a"/>			
+			</div>
+
+
+		</form>
+	</div>
+</div>
 	
 
 	<!-- JavaScript under here -->
-	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
-	<script type="text/javascript" src="js/main.js></script>
+	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.calbox.min.js"></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i18n/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
+	<script type="text/javascript" src="js/json.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+	
 </body>
 </html>
