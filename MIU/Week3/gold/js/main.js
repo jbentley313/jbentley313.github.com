@@ -26,25 +26,25 @@ $(document).bind("pageinit", function(){
 		return theElement;
 	}
 
-// function toggleControls(n){
-// 		switch(n){
-// 			case "on":
-// 				gE("addRecipeForm").style.display = "none";
-// 				gE("clear").style.display = "inline";
-// 				gE("display").style.display = "none";
-// 				gE("addNew").style.display = "inline";
-// 				break;
-// 			case "off":
-// 				gE("addRecipeForm").style.display = "block";
-// 				gE("clear").style.display = "inline";
-// 				gE("display").style.display = "inline";
-// 				gE("addNew").style.display = "none";
-// 				gE("items").style.display = "none";
-// 				break;
-// 			default:
-// 				return false;
-// 		}
-// 	}
+function toggleControls(n){
+		switch(n){
+			case "on":
+				gE("addRecipeForm").style.display = "none";
+				gE("clear").style.display = "inline";
+				gE("display").style.display = "none";
+				gE("addNew").style.display = "inline";
+				break;
+			case "off":
+				gE("addRecipeForm").style.display = "block";
+				gE("clear").style.display = "inline";
+				gE("display").style.display = "inline";
+				gE("addNew").style.display = "none";
+				gE("items").style.display = "none";
+				break;
+			default:
+				return false;
+		}
+	}
 	
 
 	function getCheckboxValues(){
@@ -71,7 +71,7 @@ $(document).bind("pageinit", function(){
 			//to the validate function, then passed here, into storeData function
 			id = key;
 		}
-		getCheckboxValues()
+		getCheckboxValues();
 		//Get all of our form field value and store in an object.
 		//Object properties contain array with the form label and input values.
 		var item 			= {};
@@ -103,7 +103,7 @@ $(document).bind("pageinit", function(){
 			var makeLi = document.createElement("li");
 			makeLi.setAttribute("id", "ele");
 			var linksLi= document.createElement("li");
-			linksLi.setAttribute("id", "dL")
+			linksLi.setAttribute("id", "dL");
 			makeList.appendChild(makeLi);
 			var key = localStorage.key(i);
 			var value = localStorage.getItem(key);
@@ -245,7 +245,7 @@ $(document).bind("pageinit", function(){
 	
 
 	//Set Link and Submit Click Events
-	var displayLink = gE("display");
+	var displayLink = gE("display1");
 	displayLink.addEventListener("click", getData);
 	var clearLink = gE("clear");
 	clearLink.addEventListener("click", clearLocal);
