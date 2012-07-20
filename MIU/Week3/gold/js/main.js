@@ -26,29 +26,29 @@ $(document).bind("pageinit", function(){
 		return theElement;
 	}
 
-function toggleControls(n){
-		switch(n){
-			case "on":
-				gE("addRecipeForm").style.display = "none";
-				gE("clear").style.display = "inline";
-				gE("display").style.display = "none";
-				gE("addNew").style.display = "inline";
-				break;
-			case "off":
-				gE("addRecipeForm").style.display = "block";
-				gE("clear").style.display = "inline";
-				gE("display").style.display = "inline";
-				gE("addNew").style.display = "none";
-				gE("items").style.display = "none";
-				break;
-			default:
-				return false;
-		}
-	}
+// function toggleControls(n){
+// 		switch(n){
+// 			case "on":
+// 				gE("addRecipeForm").style.display = "none";
+// 				gE("clear").style.display = "inline";
+// 				gE("display").style.display = "none";
+// 				gE("addNew").style.display = "inline";
+// 				break;
+// 			case "off":
+// 				gE("addRecipeForm").style.display = "block";
+// 				gE("clear").style.display = "inline";
+// 				gE("display").style.display = "inline";
+// 				gE("addNew").style.display = "none";
+// 				gE("items").style.display = "none";
+// 				break;
+// 			default:
+// 				return false;
+// 		}
+// 	}
 	
 
 	function getCheckboxValues(){
-		 	var	checkBoxes = $("mealTime");
+		 	var	checkBoxes = document.getElementById("addRecipeForm").mealTime;
 				tcheckedBoxes = [];
 		for(var i=0; i<checkBoxes.length; i++){
 			if(checkBoxes[i].checked){
@@ -88,6 +88,8 @@ function toggleControls(n){
 	}
 	function getData(){
 		// toggleControls("on");
+
+
 		if(localStorage.length === 0){
 			alert("There are no recipes to display! Default Data has been populated!");
 			autoFillData();			
@@ -97,7 +99,7 @@ function toggleControls(n){
 		var makeList = document.createElement("ul");
 
 		makeDiv.appendChild(makeList);
-		document.body.appendChild(makeDiv);
+		document.getElementById("displayTarget").appendChild(makeDiv);
 		gE("items").style.display = "block";
 		for(var i=0, len=localStorage.length; i<len;i++){
 			var makeLi = document.createElement("li");
@@ -186,7 +188,7 @@ function toggleControls(n){
 		gE("directions").value = item.directions[1];
 		
 		var placeValues = function(){
-			var checkboxes = $("mealTime");
+			var checkboxes = document.getElementById("addRecipeForm").mealTime;
 			for(i=0, j=checkboxes.length; i<j; i++){
 				for(n=0, m=item.checks[1].length; n<m; n++){
 					if(checkboxes[i].value === item.checks[1][n]){
@@ -197,16 +199,20 @@ function toggleControls(n){
 			//console.log(item.checks);//console log to make sure the correct items have been saved
 		};
 		placeValues();
+		console.log(item.checks);
+		
+		
 
 		//remove initial listener from the input 'save recipe' button
 		save.removeEventListener("click", storeData);
 		//Change submit button value to Edit Button
-		gE("submit").value = "Edit Recipe";
+		gE("submit").value = "Save Edited Recipe";
 		var editSubmit = gE("submit");
 		//save the key value estab in this func as a prpty of the editSubmit event
 		//so we can use that value when we save the data we edited.
-		editSubmit.addEventListener("click", validate);
+		editSubmit.addEventListener("click", submit);
 		editSubmit.key = this.key;
+
 	};
 
 	function deleteItem(){
@@ -214,7 +220,8 @@ function toggleControls(n){
 		if(ask){
 			localStorage.removeItem(this.key);
 			alert("Recipe was deleted!");
-			window.location.reload();	
+			window.location.reload();
+
 		}else{
 			alert("Recipe was NOT deleted.");
 		}		
@@ -226,7 +233,7 @@ function toggleControls(n){
 		}else{
 			localStorage.clear();
 			alert("All recipes are deleted!");
-			window.location.reload();
+			// window.location.reload();
 			return false;
 		}
 	}
@@ -238,7 +245,7 @@ function toggleControls(n){
 	;
 	var parseRecipeForm = function(data){
 		//uses form data here
-		console.log(data);
+		// console.log(data);
 		storeData();
 
 	};
@@ -249,7 +256,7 @@ function toggleControls(n){
 	displayLink.addEventListener("click", getData);
 	var clearLink = gE("clear");
 	clearLink.addEventListener("click", clearLocal);
-	// var save = gE("submit");
+	var save = gE("submit");
 	// save.addEventListener("click", validate);
 
 
