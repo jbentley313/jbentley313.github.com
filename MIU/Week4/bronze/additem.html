@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- MiU Project:2, Jason Bentley,Term 1207  "Recipe Keeper"-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta keywords="recipe keeper, Full Sail University, Visual Frameworks" />
+		<meta description="Quickly save a new favorite recipe while you are out and about!" />
+		<meta name="robots" content="index, follow" />
+		<meta name="viewport" content="user-scalable=no, width=device-width" />
+		<meta name="HandheldFriendly" content="True" />
+		<meta name="MobileOptimized" content="320" />
+		<link  rel="stylesheet" href="css/recipeForm.css" /> 
+		<title>Recipe Keeper</title>
+	</head>
+	<body>
+		
+		<h1>Recipe Keeper</h1>
+		<nav>
+				<a href="#" id="display">Display Data</a>
+				<a href="additem.html" id="addNew" style="display:none; ">Add New Recipe</a>
+				<a href="#" id="clear">Clear Stored Data</a>			
+				
+		</nav>	
+
+		<form action="#" method="post" id="recipeForm">
+			<fieldset class="info">
+				<legend>
+					<span>Recipe Info</span>
+				</legend>
+				<ul id="errors"></ul> 
+
+				<ul>
+					<li class="space"><label for="recipename">Recipe Name:</label><input type="text" id="recipename" /></li>
+					<li class="space"><label for="rating">Rate the Recipe</label><input type="range" min="0" max="10" step="1" id="rating" /></li>
+					<li class="space"><label for="date">Date Added</label><input name="day" type="date" id="date"/></li>
+					<li class="space" id="select"><label for="type">Type of Dish</label></li>
+				
+					<li class="space" <label for="Meal Time">Meal Time:</label></li>
+						
+						<ul class="nobox">
+							<li><input type="checkbox" name="mealTime" value="appetizer"  id="appetizer"/><label class="meal" for="appetizer">Appetizer</label></li>
+							<li><input type="checkbox" name="mealTime" value="breakfast"  id="breakfast"/><label class="meal" for="breakfast">Breakfast</label></li>
+							<li><input type="checkbox" name="mealTime" value="lunch"  id="lunch"/><label class="meal" for="lunch">Lunch</label></li>
+							<li><input type="checkbox" name="mealTime" value="dinner"  id="dinner"/><label class="meal" for="dinner">Dinner</label></li>
+						
+						</ul>
+						
+					
+				
+					<li class="space"><label for="directions">Directions:</label><textarea id="directions"></textarea></li>
+				</ul>
+				<input type="hidden" value="true" />
+			<input type="submit" value="Save Recipe" id="submit"/><br/>
+			
+			</fieldset>
+			
+			
+		</form>
+		<script src="js/json.js" type="text/javascript"></script>
+		<script src="js/main.js" type="text/javascript"></script>
+			
+	</body>
+</html>
