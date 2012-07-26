@@ -88,8 +88,6 @@ $(document).bind("pageinit", function(){
 		window.location="index.html";
 	}
 	function getData(){
-		// toggleControls("on");
-
 
 		if(localStorage.length === 0){
 			alert("There are no recipes to display! Default Data has been populated!");
@@ -125,6 +123,7 @@ $(document).bind("pageinit", function(){
 
 			makeItemLinks(localStorage.key(i), linksLi); //Create edit and delete buttons for each item
 		} 
+
 	}
 	//get image for category
 	function getImage(catName, makeSublist){
@@ -148,7 +147,7 @@ $(document).bind("pageinit", function(){
 	//Create edit and delete links for eachstored item when disp
 	function makeItemLinks(key, linksLi){
 		var editLink = document.createElement("a");
-		editLink.href = "#";
+		editLink.href = "#addRecipe";
 		editLink.key = key;
 		var editText = "Edit Recipe";
 		editLink.addEventListener("click", editItem);
@@ -163,7 +162,7 @@ $(document).bind("pageinit", function(){
 
 		//add delete single item link
 		var deleteLink = document.createElement("a");
-		deleteLink.href = "#";
+		deleteLink.href = "#display1";
 		deleteLink.key = key;
 		var deleteText = "Delete Recipe";
 		deleteLink.addEventListener("click", deleteItem);
@@ -213,7 +212,7 @@ $(document).bind("pageinit", function(){
 		//so we can use that value when we save the data we edited.
 		editSubmit.addEventListener("click", submit);
 		editSubmit.key = this.key;
-		window.location="index.html#addRecipe";
+		// window.location="index.html#addRecipe";
 
 	};
 
@@ -224,9 +223,8 @@ $(document).bind("pageinit", function(){
 		if(ask){
 			localStorage.removeItem(this.key);
 			alert("Recipe was deleted!");
-			// $( window ).bind( 'load', getData());
-			// window.location.reload();
-			$("display1").listview(refresh());
+			$("#display1").listview("refresh");
+			
 
 		}else{
 			alert("Recipe was NOT deleted.");
