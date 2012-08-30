@@ -17,12 +17,12 @@ $(document).bind("pageinit", function(){
 			var data = arform.serializeArray();
 			localStorage.setItem("arform", data);
 			parseRecipeForm(data);
-			// storeData();
+			// storeData(data);
 
 		}
 	});
 	
-	//Get ElementById function
+	// Get ElementById function
 	// function gE(x){
 	// 	var theElement = document.getElementById(x);
 	// 	return theElement;
@@ -31,15 +31,14 @@ $(document).bind("pageinit", function(){
 function toggleControls(n){
 		switch(n){
 			case "on":
-				$("#addRecipeForm").hide();
+				$("#addRecipe").hide();
 				$("#clear").show();
 				$("#display1").hide();
 				$("#addNew").show();
 				break;
+
 			case "off":
-				
-				// $("#addRecipe").show();
-				$("#addRecipeForm").show();
+				$("#addRecipe").show();
 				$("#clear").show();
 				$("#display1").show();
 				$("#addNew").hide();
@@ -88,12 +87,13 @@ function toggleControls(n){
 		//Save data into Local Storage: Use Stringify to convert the object to a string.
 		localStorage.setItem(id, JSON.stringify(item));
 		alert("Recipe Saved!");
+		
 		window.location.reload();
 		
 	}
 	function getData(){
 
-		// toggleControls("on");
+		toggleControls("on");
 
 		if(localStorage.length === 0){
 			alert("There are no recipes to display! Default Data has been populated!");
@@ -148,7 +148,10 @@ function toggleControls(n){
 			localStorage.setItem(id, JSON.stringify(json[n]));
 
 		}
+		// $(‘#display1’).listview(‘refresh’);
 	}
+
+	
 	//Make Item Links
 	//Create edit and delete links for eachstored item when disp
 	function makeItemLinks(key, linksLi){
@@ -252,31 +255,34 @@ function toggleControls(n){
 			}else {
 				alert("No Recipes Deleted!");
 			}
-window.location.reload();
+		window.location.reload();
 		}
 		return false;
 	}
+	
 
 	
 
 	//Variable Defaults
 	var tcheckedBoxes
 	;
+	//parseRecipeForm function only worked down here, not at top
 	var parseRecipeForm = function(data){
 		//uses form data here
 		// console.log(data);
-		storeData();
+		storeData(data);
+
 
 	};
 	
 
 	//Set Link and Submit Click Events
 	var displayLink = $("#display1");
-	displayLink.on("click", getData);
+	displayLink.one("click", getData);
 	var clearLink = $("#clear");
-	clearLink.on("click", clearLocal);
+	clearLink.one("click", clearLocal);
 	var save = $("#submit");
-	save.on("click", storeData);
+	save.one("click", storeData);
 
 
 
