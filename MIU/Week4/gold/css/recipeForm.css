@@ -1,0 +1,46 @@
+/*Jason Bentey
+VFW 1206 
+Project 4*/
+
+
+.my_icon_wrapper {
+        float: left; 
+        width: 50px; height: 50px;
+        text-align:center;
+        vertical-align: middle; 
+        margin: 3px -12px -15px -10px;
+        padding-right:15px;
+}
+
+#home p {
+	text-align:center;
+	font-family:Tahoma, "Geneva", sans-serif;
+}
+
+label.error {display: block;margin:10px 0px; color:#cc0000;}
+
+.my_icon_wrapper2 {
+        /*float: left; */
+       /* width: 50px; height: 50px;*/
+        text-align:center;
+        /*vertical-align: middle; 
+        margin: 3px -12px -15px -10px;
+        padding-right:15px;*/
+}
+
+h4 {
+	text-align:center;
+	margin-top:-10px;
+	margin-bottom:-10px;	
+}
+
+.my_icon_wrapperBr {
+        float: left; 
+        margin-top:-5px;
+        margin-bottom:-5px;
+        
+                
+}
+
+
+
