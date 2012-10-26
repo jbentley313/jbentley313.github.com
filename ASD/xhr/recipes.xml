@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<allrecipes>
+    <recipe>
+        <recipeName>XML Pizza</recipeName>
+        <group>Chicken</group>
+        <rating>9</rating>
+        <checks>dinner</checks>
+        <date>2012/08/01</date>
+        <directions>Cook some XML Pizza</directions>
+    </recipe>
+    <recipe>
+        <recipeName>XML Pizza!</recipeName>
+        <group>Beef</group>
+        <rating>10</rating>
+        <checks>dinner</checks>
+        <date>2012-05-04</date>
+        <directions></directions>
+    </recipe>
+    <recipe>
+        <recipeName>30127</recipeName>
+        <group>Now</group>
+        <rating>3</rating>
+        <checks>Great Work!</checks>
+        <date>2011/03/21</date>
+        <directions></directions>
+    </recipe>
+    <recipe>
+        <recipeName>30080</recipeName>
+        <group>Que</group>
+        <rating>4</rating>
+        <checks>Great Work!</checks>
+        <date>2012/05/05</date>
+        <directions></directions>
+    </recipe>
+    <recipe>
+        <recipeName>30062</recipeName>
+        <group>Now</group>
+        <rating>5</rating>
+        <checks>Great Work!</checks>
+        <date>2012/01/19</date>
+        <directions></directions>
+    </recipe>
+    <recipe>
+        <recipeName>30060</recipeName>
+        <group>Que</group>
+        <rating>6</rating>
+        <checks>Great Work!</checks>
+        <date>2012/08/06</date>
+        <directions></directions>
+    </recipe>
+</allrecipes>
