@@ -1,0 +1,438 @@
+<!-- ASD Project Term 1211 -->
+<!doctype html>  
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>Recipe Keeper!</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.min.css" /> 
+	<link rel="stylesheet" href="css/themes/RecipeKeeper.min.css" />
+	<link rel="stylesheet" href="css/recipeForm.css"/>
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+
+	<div data-role="page" id="home">
+
+		
+		<!-- content with cta link and image-->
+		<div data-role="content" data-theme="a">
+			
+			<p class="my_icon_wrapper2">
+				<img src="images/sushi2.png" height="100" width="270">
+			</p>
+			<a href="#addRecipe" data-role="button" id="addNew" data-icon="plus" data-iconpos="right" >Add a Recipe Now!</a>
+			<a href="#display1"  data-role="button" id="display1" data-icon="star" data-iconpos="right">My Recipe Book</a>		
+		</div>
+
+
+		<!-- navigation (browse) list -->
+		<div data-role="content" data-theme="a">
+			<ul data-role="listview" data-filter="true" data-filter-placeholder="Search Recipes..." data-theme="a">
+				<li data-role="list-divider">Browse Recipes by...</li>
+				<li><a href="#add" data-transition="slide">
+					<p class="my_icon_wrapper">
+						<img src="images/chickenIconSmall.png">
+						<h3>Chicken</h3>
+					</p>
+				</a></li>
+				<li><a href="#add" data-transition="slide">
+					<p class="my_icon_wrapper">
+						<img src="images/beefIconSmall.png">
+						<h3>Beef</h3>
+					</p>
+				</a></li>
+				<li><a href="#add" data-transition="slide">
+					<p class="my_icon_wrapper">
+						<img src="images/porkIconSmall.png">
+						<h3>Pork</h3>
+					</p>
+				</a></li>
+				<li><a href="#add"data-transition="slide">
+					<p class="my_icon_wrapper">
+						<img src="images/veggieIconSmall.png">
+						<h3>Veggie</h3>
+					</p>
+				</a></li>
+				<li><a href="#byDate" data-transition="slide">
+					<p class="my_icon_wrapper">
+						<img src="images/dateIcon.png">
+						<h3>Date Added</h3>
+					</p>
+				</a></li>
+			</ul>
+		</div>
+
+		<!-- footer navbar-->
+		<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#data" data-icon="star">Data</a></li>
+				</ul>
+
+			</div>
+		</div>
+
+	</div>
+	<div data-role="page" id="display1" data-add-back-btn="true" data-theme="a">
+		
+
+		<div data-role="content" id="displayTarget">
+			<div data-role="header" data-position="fixed">
+			<h1>Recipes</h1>
+			<p class="my_icon_wrapperBr">
+				<img src="images/sushi2.png" height="30" width="70">
+			</p>
+				<a href="#" data-role="button" id="clear" class="ui-btn-right">Delete All</a>
+
+			</div>
+		</div>
+
+		<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#data" data-icon="star">Data</a></li>
+				</ul>
+
+			</div>
+		</div>
+		
+	</div>
+
+	<!-- generic landing page (for now) -->
+	<div data-role="page" id="add" data-add-back-btn="true" data-theme="a">
+
+		<div data-role="header" data-position="fixed">
+			<h1>Coming Soon</h1>
+			<p class="my_icon_wrapperBr">
+				<img src="images/sushi2.png" height="30" width="70">
+			</p>
+		</div>
+
+		<div data-role="content">
+			<p>This content is coming soon!</p>
+			
+		</div>
+
+		<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#data" data-icon="star">Data</a></li>
+				</ul>
+
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Recipe By Date Page-->
+	<div data-role="page" id="byDate" data-add-back-btn="true" data-theme="a">
+
+		<div data-role="header" data-position="fixed">
+			<h1>By Date</h1>
+			<p class="my_icon_wrapperBr">
+				<img src="images/sushi2.png" height="30" width="70">
+			</p>
+		</div>
+
+		<div data-role="content">
+
+			<ul data-role="listview">
+				<li><a href="#chickenCr" data-transition="slide">
+				<h3>Chicken Crecents</h3>
+				<p>added 2012-07-11</p>
+				</a></li>
+				<li><a href="#PepBr" data-transition="slide">
+				<h3>Pepperoni Bread</h3>
+				<p>added 2012-07-03</p>
+				</a></li>
+				<li><a href="#chili" data-transition="slide">
+				<h3>Chili</h3>
+				<p>added 2012-06-28</p>
+				</a></li>
+				<li><a href="#ribs" data-transition="slide">
+				<h3>Smoked Ribs</h3>
+				<p>added 2012-03-04</p>
+				</a></li>
+			</ul>
+		</div>
+
+		<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#data" data-icon="star">Data</a></li>
+				</ul>
+
+			</div>
+		</div>
+
+	</div>
+
+	<!--Data Page-->
+	<div data-role="page" id="data"  data-theme="a" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h1>Data</h1>
+			<p class="my_icon_wrapperBr">
+				<img src="images/sushi2.png" height="30" width="70">
+			</p>
+		</div>
+		<div data-role="content">
+        	<div>
+        		<input id="Json" type="button" value="Load JSON" data-theme="a" />
+        	</div>
+        	<div>
+	        	<input id="CSV" type="button" value="Load CSV" data-theme="a" />
+        	</div>
+        	<div>
+	        	<input id="XML" type="button" value="Load XML" data-theme="a" />
+        	</div>	
+				<div id="LoadedData">
+				</div>
+        </div>	
+		
+
+		<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#data" data-icon="star">Data</a></li>
+				</ul>
+
+			</div>
+		</div>
+
+	</div>
+
+	<!--Chicken Recipe landing page (for now) -->
+	<div data-role="page" id="chickenCr" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h1>Crecents!</h1>
+			<p class="my_icon_wrapperBr">
+				<img src="images/sushi2.png" height="30" width="70">
+			</p>
+		</div>
+
+		<div data-role="content">
+			<h3>Chicken Crecents</h3>
+			<p>This Recipe Coming Soon!</p>
+			
+		</div>
+
+		<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#data" data-icon="star">Data</a></li>
+				</ul>
+
+			</div>
+		</div>
+
+	</div>
+
+	<!--Pepperoni Bread Recipe landing page (for now) -->
+	<div data-role="page" id="PepBr" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h1>Bread!</h1>
+			<p class="my_icon_wrapperBr">
+				<img src="images/sushi2.png" height="30" width="70">
+			</p>
+		</div>
+
+		<div data-role="content">
+			<h3>Pepperoni Bread</h3>
+			<p>This Recipe Coming Soon!</p>
+			
+		</div>
+
+		<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#data" data-icon="star">Data</a></li>
+				</ul>
+
+			</div>
+		</div>
+
+	</div>
+
+	<!--Chili Recipe landing page (for now) -->
+	<div data-role="page" id="chili" data-add-back-btn="true">
+		<div data-role="header" data-position="fixed">
+			<h1>Chili!</h1>
+			<p class="my_icon_wrapperBr">
+				<img src="images/sushi2.png" height="30" width="70">
+			</p>
+		</div>
+
+		<div data-role="content">
+			<h3>Chili</h3>
+			<p>This Recipe Coming Soon!</p>
+			
+		</div>
+
+		<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#data" data-icon="star">Data</a></li>
+				</ul>
+
+			</div>
+		</div>
+
+	</div>
+
+	<!--Rib Recipe landing page (for now) -->
+	<div data-role="page" id="ribs" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h1>Ribs!</h1>
+			<p class="my_icon_wrapperBr">
+				<img src="images/sushi2.png" height="30" width="70">
+			</p>
+		</div>
+
+		<div data-role="content">
+			<h3>Smoked Ribs</h3>
+			<p>This Recipe Coming Soon!</p>
+			
+		</div>
+
+		<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#data" data-icon="star">Data</a></li>
+				</ul>
+
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<!-- Recipe Form -->
+	<div data-role="page" id="addRecipe" data-add-back-btn="true">
+
+	<div data-role="header" data-position="fixed" data-iconpos="right">
+		<h1>Add a Recipe</h1>
+			<p class="my_icon_wrapperBr">
+				<img src="images/sushi2.png" height="30" width="70">
+			</p>
+	</div>
+
+	<div data-role="content" data-theme="a">
+
+		<form action="" method="post" id="addRecipeForm">
+
+			<div data-role="fieldcontain">
+				<label for="recipename">Recipe Name:</label>
+				<input type="text" name="recipename" id="recipename" class="required" data-theme="a"/>			
+			</div>
+
+			<div data-role="fieldcontain">
+				<label for="rating">Recipe Rating:</label>
+				<input type="range" name="rating" id="rating" value="10" min="0" max="10" data-theme="a"/>	
+			</div>
+
+			<div data-role="fieldcontain">
+				<label for="groups">Meal Type</label>
+				<select name="groups" id="groups" data-native-menu="false"  data-theme="a"  class="required">
+					<option data-placeholder="true" value>Please Select One</option>
+					<optgroup label="Meal Type:">
+						<option value="Chicken">Chicken</option>
+						<option value="Beef">Beef</option>
+						<option value="Pork">Pork</option>
+						<option value="Veggie">Veggie</option>
+					</optgroup>
+				</select>
+			</div>
+
+			<div data-role="fieldcontain">
+				<label for="date">Date Added</label>
+				<input name="date" id="date" type="date" data-role="datebox" data-options='{"mode": "calbox"}' data-theme="a">	
+			</div>
+
+			
+
+			<div data-role="fieldcontain">
+				<fieldset data-role="controlgroup" >
+					<legend>Meal Time:</legend>
+					<input type="checkbox" value="appetizer" name="mealTime" id="appetizer" data-theme="a"/>
+					<label for="appetizer">Appetizer</label>
+					<input type="checkbox" value="breakfast" name="mealTime" id="breakfast" data-theme="a"/>
+					<label for="breakfast">Breakfast</label>
+					<input type="checkbox" value="lunch" name="mealTime" id="lunch" data-theme="a"/>
+					<label for="lunch">Lunch</label>
+					<input type="checkbox" value="dinner" name="mealTime" id="dinner" data-theme="a"/>
+					<label for="dinner">Dinner</label>
+				</fieldset>		
+			</div>
+
+			
+
+			<div data-role="fieldcontain" >
+				<label for="directions">Directions:</label>
+				<textarea name="directions" id="directions" data-theme="a" class="required"></textarea >
+			</div>
+			
+
+			<div data-role="fieldcontain">
+				<input type="submit" value="Save Recipe" id="submit" data-theme="a"/>
+				<input type="reset" value="Reset" />			
+			</div>
+
+
+		</form>
+		<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#data" data-icon="star">Data</a></li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+</div>
+	
+
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.calbox.min.js"></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i18n/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
+	<script type="text/javascript" src="js/json.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+	
+</body>
+</html>

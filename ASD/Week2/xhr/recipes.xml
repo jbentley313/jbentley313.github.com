@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<allrecipes>
+    <recipe>
+        <recipeName>XML Pizza</recipeName>
+        <group>Chicken</group>
+        <rating>9</rating>
+        <checks>dinner</checks>
+        <date>2012/08/11</date>
+        <directions>Cook some XML Pizza</directions>
+    </recipe>
+    <recipe>
+        <recipeName>Hot Dogs!</recipeName>
+        <group>Beef</group>
+        <rating>10</rating>
+        <checks>dinner</checks>
+        <date>2012-05-14</date>
+        <directions>Cook some hotdogs</directions>
+    </recipe>
+    <recipe>
+        <recipeName>Eggs</recipeName>
+        <group>Veggie</group>
+        <rating>3</rating>
+        <checks>breakfast</checks>
+        <date>2011/03/21</date>
+        <directions>cook eggs</directions>
+    </recipe>
+    <recipe>
+        <recipeName>Ribs</recipeName>
+        <group>Pork</group>
+        <rating>4</rating>
+        <checks>dinner</checks>
+        <date>2012/05/05</date>
+        <directions>cook ribs</directions>
+    </recipe>
+    <recipe>
+        <recipeName>Secret Recipe</recipeName>
+        <group>Veggie</group>
+        <rating>5</rating>
+        <checks>breakfast</checks>
+        <date>2012/01/23</date>
+        <directions>cook something crazy tasty!</directions>
+    </recipe>
+    <recipe>
+        <recipeName>pep bread</recipeName>
+        <group>beef</group>
+        <rating>6</rating>
+        <checks>appetizer</checks>
+        <date>2012/08/16</date>
+        <directions>pep bread cooking directions go here</directions>
+    </recipe>
+</allrecipes>
