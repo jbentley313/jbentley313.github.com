@@ -1,0 +1,26 @@
+/*Jason Bentley AVF Project2 Term 0113*/
+
+em {
+    color: #956bd6;
+    font-size: .6em;
+}
+
+#twit-data-output {
+    float: left;
+    background: #fff;
+    color: #000  ;
+    list-style: none;
+    font-size: 1.1em;
+    width: 80%;
+    font: sans-serif;
+}
+
+li#data-msg {
+    font-size: 2em;
+    background: #000;
+    color: #fff;
+}
+
+
+
+

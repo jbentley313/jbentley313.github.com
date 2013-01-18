@@ -1,0 +1,188 @@
+<!-- AVF Project1 Term 0113 -->
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>AVF Project1</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" /> 
+	<link rel="stylesheet" href="css/themes/RecipeKeeper.min.css" />
+	<link rel="stylesheet" href="css/recipeForm.css"/>
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+
+	<div data-role="page" id="home" data-theme="a">
+
+		<!-- navigation (browse) list -->
+		<div data-role="content" data-theme="a">
+			<ul id="rGroups" data-role="listview" data-theme="a">
+				 <li data-role="list-divider">iOS / Android Native Feature Demos...</li>
+				<li><a href="#landing" id="voice" data-transition="slide">
+					<p class="my_icon_wrapper">
+						<h3>Voice Recorder</h3>
+					</p>
+				</a></li>
+				<li><a href="#landing" id="video" data-transition="slide">
+					<p class="my_icon_wrapper">
+						<h3>Video Recorder</h3>
+					</p>
+				</a></li>
+				<li><a href="#landing" id="accel" data-transition="slide">
+					<p class="my_icon_wrapper">
+						<h3>Accelerometer</h3>
+					</p>
+				</a></li>
+				<li><a href="#landing" id="bluetooth" data-transition="slide">
+					<p class="my_icon_wrapper">
+						<h3>Bluetooth</h3>
+					</p>
+				</a></li> 
+				<li><a href="#landing" id="Camera" data-transition="slide">
+					<p class="my_icon_wrapper">
+						<h3>Camera</h3>
+					</p>
+				</a></li> 
+			</ul>
+		</div>
+
+		<div data-role="content" data-theme="b">
+			<div data-role="list-divider">JSON-P Data APIs</div>
+			<a href="#flikr" data-role="button" id="flikr">Flickr Integration</a>
+			<a href="#twit" data-role="button" id="twit">Twitter Integration</a>		
+		</div>
+
+		<div data-role="content" data-theme="b">
+				 <ul id="rGroups" data-role="listview" data-theme="a">
+				 <li data-role="list-divider">Research...</li>
+				<li><a href="#research1" id="reasearch1" data-transition="slide">
+					<p class="my_icon_wrapper">
+						<h3>Week 1</h3>
+					</p>
+				</a></li>
+				<li><a href="#landing" id="video" data-transition="slide">
+					<p class="my_icon_wrapper">
+						<h3>Week 2</h3>
+					</p>
+				</a></li>
+				<li><a href="#landing" id="accel" data-transition="slide">
+					<p class="my_icon_wrapper">
+						<h3>Week 3</h3>
+					</p>
+				</a></li>
+				<li><a href="#landing" id="bluetooth" data-transition="slide">
+					<p class="my_icon_wrapper">
+						<h3>Week 4</h3>
+					</p>
+				</a></li> 
+			</ul>
+		</div>
+
+		<!-- footer navbar-->
+		<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+				</ul>
+
+			</div>
+		</div>
+
+	</div>
+
+	<div data-role="page" id="landing" data-theme="a" data-add-back-btn="true">
+		<div data-role="content" data-theme="a">
+			<h3>Generic Landing Page (for now)</h3>
+			<!-- footer navbar-->
+			<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div data-role="page" id="twit" data-theme="a" data-add-back-btn="true">
+		<div data-role="content" data-theme="a">
+			<h3>Twitter Integration</h3>
+				<ul id="twit-data-output">
+					<li id="data-msg">Searching Latest Pro Tools Tweets...</li>
+				</ul>
+			<!-- footer navbar-->
+			<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div data-role="page" id="flikr" data-theme="a" data-add-back-btn="true">
+		<div data-role="content" data-theme="a">
+			<h3>Flickr Integration</h3>
+				<div id="flik-data-output">
+					<h2 id="fdata-msg">Searching Latest Pro Tools Flickrpics...</h2>
+				</div>
+			<!-- footer navbar-->
+			<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div data-role="page" id="research1" data-theme="a" data-add-back-btn="true">
+		<div data-role="content" data-theme="a">
+			<h3>Week 1 Research</h3>
+				<iframe width="560" height="315" src="http://www.youtube.com/embed/2aZqVFBB1JM" frameborder="0" allowfullscreen></iframe>
+			<!-- footer navbar-->
+			<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	
+	
+	
+	
+
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+	
+</body>
+</html>
