@@ -1,0 +1,264 @@
+<!DOCTYPE html>  
+<!-- AVF Project3 Term 0113 -->
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>AVF Project1</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" /> 
+	<link rel="stylesheet" href="css/themes/RecipeKeeper.min.css" />
+	<link rel="stylesheet" href="css/recipeForm.css"/>
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+
+	<div data-role="page" id="home" data-theme="a">
+
+		<!-- navigation (browse) list -->
+		<div data-role="content" data-theme="a">
+			<ul data-role="listview" data-theme="a">
+				 <li data-role="list-divider">iOS / Android Native Feature Demos...</li>
+				<li><a href="#compass" id="voice" data-transition="slide">
+						<h3>Compass</h3>
+				</a></li>
+				<li><a href="#connection" data-transition="slide">
+						<h3>Connection Test</h3>
+				</a></li>
+				<li><a href="#devicePage"  data-transition="slide">
+						<h3>Device Info</h3>
+				</a></li>
+				<li><a href="#landing"  data-transition="slide">
+						<h3>Bluetooth</h3>
+				</a></li> 
+				<li><a href="#landing"  data-transition="slide">
+						<h3>Camera</h3>
+				</a></li> 
+			</ul>
+		</div>
+
+		<div data-role="content" data-theme="b">
+			<div data-role="list-divider">JSON-P Data APIs</div>
+			<a href="#flikr" data-role="button" >Flickr Integration</a>
+			<a href="#twit" data-role="button" >Twitter Integration</a>		
+		</div>
+
+		<div data-role="content" data-theme="b">
+				 <ul id="rGroups" data-role="listview" data-theme="a">
+				 <li data-role="list-divider">Research...</li>
+				<li><a href="#research1"  data-transition="slide">
+						<h3>Week 1</h3>
+				</a></li>
+				<li><a href="#landing"  data-transition="slide">
+						<h3>Week 2</h3>
+				</a></li>
+				<li><a href="#vid"  data-transition="slide">
+						<h3>Week 3 (video link)</h3>
+				</a></li>
+				<li><a href="#landing"  data-transition="slide">
+						<h3>Week 4</h3>
+				</a></li> 
+			</ul>
+		</div>
+
+		<!-- footer navbar-->
+		<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+				</ul>
+
+			</div>
+		</div>
+
+	</div>
+
+	<div data-role="page" id="landing" data-theme="a" data-add-back-btn="true">
+		<div data-role="content" data-theme="a">
+			<h3>Generic Landing Page (for now)</h3>
+			<!-- footer navbar-->
+			<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<!-- Twitter Page -->
+	<div data-role="page" id="twit" data-theme="a" data-add-back-btn="true">
+		<div data-role="content" data-theme="a">
+			<h3>Twitter Integration</h3>
+				<ul id="twit-data-output">
+					<li id="data-msg">Searching Latest Pro Tools Tweets...</li>
+				</ul>
+			<!-- footer navbar-->
+			<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+<!-- Flickr Page	 -->
+	<div data-role="page" id="flikr" data-theme="a" data-add-back-btn="true">
+		<div data-role="content" data-theme="a">
+			<h3>Flickr Integration</h3>
+				<div id="flik-data-output">
+					<h2 id="fdata-msg">Searching Latest Pro Tools Flickrpics...</h2>
+				</div>
+			<!-- footer navbar-->
+			<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<!-- Research1 Page -->
+	<div data-role="page" id="research1" data-theme="a" data-add-back-btn="true">
+		<div data-role="content" data-theme="a">
+			<h3>Week 1 Research</h3>
+				<h4>Less obvious perks of using 'live' data resources include logins and payments. 
+					How could Twitter be used in these two scenarios?
+				</h4>
+ 
+				<h5>I have seen a lot of “log in with” buttons recently.  I may be getting old, but I don’t yet trust these login methods.  Payments with these buttons are even scarier to me!  The only solution for payments, in my mind, is to link your Twitter email account with an already trusted payment site like PayPal.  That way, when you make a payment with the Twitter login and pay, you know that it is only linked through that trusted PayPal source.  With all of this cybercrime we see in the news on a daily basis, I am really interested in learning a lot more about this. I feel there will be a lot of jobs in mobile that have to do with security/payments.
+				</h5> 
+ 
+				<h4>Visit Programmableweb.com and search for JSON-P data sources. 
+					Why would we need JSON-P, specifically?
+				</h4>
+ 
+				<h5>After viewing a few topics on JSON vs JSON-P, it seems JSON-P is a way we can get around the Same Origin Policy.  So we need this to be able to external data into our apps.
+				</h5>
+ 
+				<h4>Based on the JSON-P search results: what data resource(s) do you think might pair well with which types of Native device features?
+				</h4>
+ 
+				<h5>There are so many resources of data. I would think making a “social networking photo album” that takes all of your social network’s photos, and serves them up in one nice location.  Also, there are many social networking mashup apps, you would need jsonp to get streams from all of these different sites into one.
+				</h5>
+ 
+				<h4>Please describe any design and functionality intentions you may have for your Demo app components this month.
+				</h4>
+ 
+				<h5>I have been interested in the accelerometer since it came out.  I am going to find a way to demo this.  I also hope to be able to read/write from/to Facebook and Twitter.  This is something that will be incorporated into many of our apps in the future, whether it be just to post high scores from a game, or post photos from within our apps to these social networks.
+				</h5>
+ 
+				<h4>Briefly describe some past 'lessons learned' regarding workflow as it relates to research, design, development, etc.
+				</h4>
+ 
+				<h5>I would have to say my lesson learned for my workflow is to start early and stay organized.  I had a tough time with our first “easy” assignment.  I was short on time due to unforeseen circumstances, which left me with no time to design my app how I wanted it.  Most of my time was just setting it up.  Now that it makes more sense, I hope to be able to spend all of the other time designing and developing!
+				</h5>
+
+				
+			<!-- footer navbar-->
+			<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<!-- Compass Page -->
+	<div data-role="page" id="compass" data-add-back-btn="true">
+		<section id="cmain">
+
+		</section>
+		<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+<!-- Connection Page -->
+	<div data-role="page" id="connection" data-add-back-btn="true">
+		<section id="connectionMain">
+			<a href="#" data-role="button" id="check">What's My Connection Type?</a>
+		</section>
+		<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+<!-- Device Page -->
+	<div data-role="page" id="devicePage" data-add-back-btn="true">
+		<section id="deviceMain">
+			<a href="#" data-role="button" id="devCheck">What's My Device Info?</a>
+		</section>
+		<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- Video Page -->
+	<div data-role="page" id="vid" data-add-back-btn="true">
+		<section id="videoSection">
+			<iframe width="560" height="315" src="http://www.youtube.com/embed/-got01CvzA0" frameborder="0" allowfullscreen></iframe>
+		</section>
+		<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	
+	
+	
+
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="cordova-2.3.0.js"></script>
+
+
+	
+</body>
+</html>
