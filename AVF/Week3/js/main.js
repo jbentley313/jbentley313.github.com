@@ -21,7 +21,7 @@ $(document).on("pageshow", "#twit", function() {
 //Flickr Integration	
 $(document).on("pageshow", "#flikr", function() {
 	$(function() {
-		$.getJSON("http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=d6181cc5908b0d9e18d7ca7f30ee5d47tags=protools%2C+pro+tools&per_page=12&page=1&format=json&nojsoncallback=1",
+		$.getJSON("http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=d6181cc5908b0d9e18d7ca7f30ee5d47&tags=protools%2C+pro+tools&per_page=12&page=1&format=json&nojsoncallback=1",
 			function(flikrd) {
 				console.log(flikrd);
 				if (flikrd.stat != "ok"){
