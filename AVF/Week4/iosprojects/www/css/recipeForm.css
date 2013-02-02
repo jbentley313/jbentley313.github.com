@@ -1,0 +1,159 @@
+/*Jason Bentley AVF Project4 Term 0113*/
+
+em {
+    color: #956bd6;
+    font-size: .6em;
+}
+
+#twit-data-output {
+    background: #fff;
+    color: #000  ;
+    list-style: none;
+    font-size: 1.1em;
+    width: 90%;
+    font: sans-serif;
+    margin-left: auto ;
+    margin-right: auto ;
+    text-align: left;
+}
+
+#flik-data-output {
+    float:left;   
+}
+
+#flik-data-output a {
+    
+    margin: 2%;
+
+
+}
+
+li#data-msg {
+    font-size: 2em;
+    background: #000;
+    color: #fff;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+
+
+#connectionMain  {
+    background: #fff;
+    font-size: 3em;
+    width: 80% ;
+    margin-left: 10% ;
+    margin-top: 30%;
+    text-align: center;
+}
+
+/*#check {
+    text-align: center;
+    border:2px solid;
+    border-radius:25px;
+
+}*/
+
+
+#connection {
+    background: #000;
+}
+
+#cmain {
+    background: #000;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    color: #fff;
+    text-align: center;
+    font-size: 4em;
+    border-radius:25px;
+}
+
+#compass {
+    background:#87adfc;
+    text-align: center;
+
+}
+
+/*#devCheck {
+    color: #000;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}*/
+
+
+
+#deviceMain {
+    margin-top: 10%;
+    background: #87adfc;
+    color: #fff;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#devicePage {
+    background: #31312e;
+}
+
+#geoSection h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 5%;
+    border:2px solid;
+    border-radius:25px;
+    background:#3D9AD1;
+    background-size: 10%;
+    padding: 10%;
+}
+
+#geoPage {
+    background: #0969A2;
+    text-shadow: none;
+
+}
+
+#research1 h4 {
+    border:1px solid;
+    padding:4px;
+    background: black;
+}
+
+#research1 h5 {
+    padding:4px;
+    
+}
+
+#research2 h4 {
+    border:1px solid;
+    padding:4px;
+    background: black;
+}
+
+#research2 h5 {
+    
+    padding:4px;
+}
+
+#research3 h4 {
+    border:1px solid;
+    padding:4px;
+    background: black;
+}
+
+#research3 h5 {
+    
+    padding:4px;
+}
+
+#my_video_1 {
+    margin: 0 auto; 
+    width: 90%;
+}
+
+#vidPlayPage {
+    background:black;
+}

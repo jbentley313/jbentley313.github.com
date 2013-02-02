@@ -1,0 +1,365 @@
+<!DOCTYPE html>  
+<!-- AVF Project4 Term 0113 -->
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>AVF Project1</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" /> 
+	<link rel="stylesheet" href="css/themes/RecipeKeeper.min.css" />
+	<link rel="stylesheet" href="css/recipeForm.css"/>
+	<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+
+	<div data-role="page" id="home" data-theme="a">
+
+		<!-- navigation (browse) list -->
+		<div data-role="content" data-theme="a">
+			<ul data-role="listview" data-theme="a">
+				 <li data-role="list-divider">iOS / Android Native Feature Demos...</li>
+				<li><a href="#compass" id="voice" data-transition="slide">
+						<h3>Compass (iOS)</h3>
+				</a></li>
+				<li><a href="#connection" data-transition="slide">
+						<h3>Connection Test (iOS/Android)</h3>
+				</a></li>
+				<li><a href="#devicePage"  data-transition="slide">
+						<h3>Device Info (iOS/Android)</h3>
+				</a></li>
+				<li><a href="#geoPage"  data-transition="slide">
+						<h3>Geolocation (iOS)</h3>
+				</a></li> 
+				
+			</ul>
+		</div>
+
+		<div data-role="content" data-theme="b">
+			<div data-role="list-divider">JSON-P Data APIs</div>
+			<a href="#flikr" data-role="button" >Flickr/Geolocation Mashup</a>
+			<a href="#twit" data-role="button" >Twitter/Device Info Mashup</a>		
+		</div>
+
+		<div data-role="content" data-theme="b">
+				 <ul id="rGroups" data-role="listview" data-theme="a">
+				 <li data-role="list-divider">Research and Video...</li>
+				<li><a href="#research1"  data-transition="slide">
+						<h3>Week 1</h3>
+				</a></li>
+				<li><a href="#research2"  data-transition="slide">
+						<h3>Week 2</h3>
+				</a></li>
+				<li><a href="#vidPlayPage"  data-transition="slide">
+						<h3>Week 3 (Video Link)</h3>
+				</a></li>
+				<li><a href="#research3"  data-transition="slide">
+						<h3>Week 3 (Research)</h3>
+				</a></li> 
+			</ul>
+		</div>
+
+		<!-- footer navbar-->
+		<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+				</ul>
+
+			</div>
+		</div>
+
+	</div>
+
+	
+
+
+<!-- Twitter Page -->
+	<div data-role="page" id="twit" data-theme="a" data-add-back-btn="true">
+		<div data-role="content" data-theme="a">
+			<h3>Twitter Integration</h3>
+			<h1 id="data-msg">Searching Latest Tweets about Your Device...</h1>
+				<ul id="twit-data-output">
+				</ul>
+			<!-- footer navbar-->
+			<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+<!-- Flickr Page	 -->
+	<div data-role="page" id="flikr" data-theme="a" data-add-back-btn="true">
+		<div data-role="content" data-theme="a">
+			<h3>Flickr Integration</h3>
+				<div id="flik-data-output">
+					<h2 id="fdata-msg">Searching Latest Recording Studio Pics around Your Location...</h2>
+				</div>
+			<!-- footer navbar-->
+			<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<!-- Research1 Page -->
+	<div data-role="page" id="research1" data-theme="a" data-add-back-btn="true">
+		<div data-role="content" data-theme="a">
+			<h3>Week 1 Research</h3>
+				<h4>Less obvious perks of using 'live' data resources include logins and payments. 
+					How could Twitter be used in these two scenarios?
+				</h4>
+ 
+				<h5>I have seen a lot of “log in with” buttons recently.  I may be getting old, but I don’t yet trust these login methods.  Payments with these buttons are even scarier to me!  The only solution for payments, in my mind, is to link your Twitter email account with an already trusted payment site like PayPal.  That way, when you make a payment with the Twitter login and pay, you know that it is only linked through that trusted PayPal source.  With all of this cybercrime we see in the news on a daily basis, I am really interested in learning a lot more about this. I feel there will be a lot of jobs in mobile that have to do with security/payments.
+				</h5> 
+ 
+				<h4>Visit Programmableweb.com and search for JSON-P data sources. 
+					Why would we need JSON-P, specifically?
+				</h4>
+ 
+				<h5>After viewing a few topics on JSON vs JSON-P, it seems JSON-P is a way we can get around the Same Origin Policy.  So we need this to be able to external data into our apps.
+				</h5>
+ 
+				<h4>Based on the JSON-P search results: what data resource(s) do you think might pair well with which types of Native device features?
+				</h4>
+ 
+				<h5>There are so many resources of data. I would think making a “social networking photo album” that takes all of your social network’s photos, and serves them up in one nice location.  Also, there are many social networking mashup apps, you would need jsonp to get streams from all of these different sites into one.
+				</h5>
+ 
+				<h4>Please describe any design and functionality intentions you may have for your Demo app components this month.
+				</h4>
+ 
+				<h5>I have been interested in the accelerometer since it came out.  I am going to find a way to demo this.  I also hope to be able to read/write from/to Facebook and Twitter.  This is something that will be incorporated into many of our apps in the future, whether it be just to post high scores from a game, or post photos from within our apps to these social networks.
+				</h5>
+ 
+				<h4>Briefly describe some past 'lessons learned' regarding workflow as it relates to research, design, development, etc.
+				</h4>
+ 
+				<h5>I would have to say my lesson learned for my workflow is to start early and stay organized.  I had a tough time with our first “easy” assignment.  I was short on time due to unforeseen circumstances, which left me with no time to design my app how I wanted it.  Most of my time was just setting it up.  Now that it makes more sense, I hope to be able to spend all of the other time designing and developing!
+				</h5>
+
+				
+			<!-- footer navbar-->
+			<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Research2 Page -->
+	<div data-role="page" id="research2" data-theme="a" data-add-back-btn="true">
+		<div data-role="content" data-theme="a">
+			<h3>Week 1 Research</h3>
+				<h4>What are some of the ways that you could change your HTML on your Demo app to be more accessible? (Remember, you can use the Section tag with jQuery, for instance)</h4>
+ 
+			<h5>My Html is definitely full of div after div.  I know we are not supposed to do that (this month more than any) but I am having a little difficulty understanding fully.  I am going to find more ways of semantically marking up my html.  I looked into the section tag with jQuery.  This looks interesting and I want to incorporate it throughout my code.  Maybe having a few section tags with different classes will be better than having a million divs.</h5>
+			 
+			<h4>Visit a video service on the web (like YouTube) and search for "Screen Reader Demo" and "Mobile Screen Reader" - what are some of the common frustrations (or common support mechanisms) that you see among the examples that are given - how could you fix them (or use them)?</h4>
+			 
+			<h5>This was an interesting topic!  One video I watched had a blind man telling his frustrations with certain websites.  For instance, he was “reading” a page and finally got to what he figured was the middle.  Up until that point, he had no idea what the page was about.  Then in the middle it gave instructions on how to use the top!  My idea is this.  Why not have a meta data section that addresses accessibility for every web page we make?  The same spot where we tell the browser that this was written in English…Why not have a basic description made for screen readers to tell what the page was about, and where to find certain critical things on the page?  One thing blind people really can use is the mouse.  I think we should incorporate an iPad sized touch surface that represents all the info to the blind audience.  When our meta data tells them if they want to “log in”, then touch the top.  If they want a “quick update”, touch the middle, etc.</h5>
+			 
+			<h4>Devices: Please list two devices (and some of their features) that are made specifically to support Accessibility.</h4>
+			 
+			<h5>I have to mention the first device that instantly came to my mind.  Jitterbug.  It is a mobile phone.  I remember seeing commercials for this on tv.  It’s geared towards the “less technically inclined.”  It features large text, and a scaled down mobile phone.  You can press a button on it and an “operator” sees your contacts.  You simply tell them “call my son, Bob!” And the operator can initiate a call to Bob.  Another device made to specifically support accessibility is a simple hearing aid.  Hearing aids can amplify speech.  It can also somewhat cancel out background noise.</h5>
+			 
+			<h4>Mobile Apps: Please list two apps (either Android or iOS, or both) that are made specifically to support Accessibility.</h4>
+			 
+			<h5>An iOS app called “Amplivision” is a great app for people with not so perfect vision.  It acts as a lighted magnifying glass.  Now you can read all of the fine print with ease!</h5>
+			 
+			<h5>One iOS built in application is SIRI.  It is a voice guided assistant.  You can press and hold the home button and siri comes to life.  Set an alarm, take a note, mark your calendar, email or text a friend, call a loved one….all from the command of your voice!</h5>
+		<!-- footer navbar-->
+			<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+					</ul>
+
+				</div>
+			</div>
+ 		</div>
+ 	</div>
+	<!-- Research3 Page -->
+	<div data-role="page" id="research3" data-theme="a" data-add-back-btn="true">
+		<div data-role="content" data-theme="a">
+			<h3>Week 3 Industry Research</h3>
+				Jason Bentley
+			<h4>What are the 'top selling' app categories in the U.S.? Japan? Great Britain?</h4>
+			<h5>U.S.- Games
+			Japan: Games*    
+			Great Britain: Games</h5>
+			<h4>Based on your three answers above, what might you infer about each of the markets listed?</h4>
+			<h5>While all three countries had strong sales in games, Japan was a little different depending on what site is being researched.  Some showed Japan as using more utility/productivity apps.  I would say that the majority of sold apps have to do with games.  A lot of the time, these games come about from social media.  People want to play games or socialize during their micro-breaks!</h5>
+			 
+			<h4>What is the average cost and bandwidth limits per user (in general) in each of the three markets? How may this impact development?</h4>
+			<h5>U.S.- 4.8 mbps average speed, $3.33 for 1 mbps
+			Japan: 61 mbps average speed, $.27 for 1 mbps
+			Great Britain: 7.6 mbps average speed, $4.11 for 1 mbps
+			This kind of info should help us make decisions on how heavy a load we expect for each application deployed to different countries.  Data intense games will be better off in places like Japan.</h5>
+			 
+			 
+			<h4>And, finally, what would be your suggested strategy in project topic and global market choice? Feel free to have a first and second choice.</h4>
+			 
+			<h5>My suggested strategy for a project topic would have to be games with an emphasis on social networking.  The social networking part could be a sort of “challenge between friends” or high scores.  There are many categories out there, but the most sold would have to be games.  If the developer is strictly after making a big check, choose games.  My second choice would be a music application.  Music seems to sit right in the middle as far as “sold” apps.  Music will never go away, so it’s also a safe bet, although it’s not the most lucrative.</h5>
+			 
+			 
+			 
+			 
+			 
+			 
+			<h6>Davenport, K (2012) The best selling iPhone apps and what they mean to us. Retrieved January 27, 2013. http://www.theproducersperspective.com/my_weblog/2012/01/the-best-selling-iphone-apps-and-what-they-mean-to-us.html
+			 
+			DotMobi(2012) Global mobile statistics 2012 Home: all the latest stats on mobile Web, apps, marketing, advertising, subscribers, and trends...
+			Retrieved January 27, 2013.
+			http://mobithinking.com/mobile-marketing-tools/latest-mobile-stats
+			 
+			Martinez-Mancotta,D(2012) Internet Speeds and Cost Around the World
+			Retrieved January 27, 2013.
+			http://dailyinfographic.com/internet-speeds-around-the-world-infographic
+			 
+			Ofcom(2011) The average cost of a fixed broadband connection stabilised in 2011
+			Retrieved January 27, 2013.
+			http://stakeholders.ofcom.org.uk/market-data-research/market-data/communications-market-reports/cmr12/uk/UK5.64
+			 
+			 
+			Skinner,C(2012) UK's average broadband speed is 7.6Mbps
+			Retrieved January 27, 2013.
+			http://www.pcadvisor.co.uk/news/broadband/3334609/uks-average-broadband-speed-is-76mbps/</h6>
+ 
+
+				
+			<!-- footer navbar-->
+			<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+				
+	
+
+
+<!-- Compass Page -->
+	<div data-role="page" id="compass" data-add-back-btn="true">
+		<section id="cmain">
+
+		</section>
+		<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+<!-- Connection Page -->
+	<div data-role="page" id="connection" data-add-back-btn="true">
+		<section id="connectionMain">
+			<a href="#" data-role="button" id="check">What's My Connection Type?</a>
+		</section>
+		<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+<!-- Device Page -->
+	<div data-role="page" id="devicePage" data-add-back-btn="true">
+		<section id="deviceMain">
+			<a href="#" data-role="button" id="devCheck">What's My Device Info?</a>
+		</section>
+		<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- Video Page -->
+	<div data-role="page" id="vidPlayPage" data-add-back-btn="true">
+		<section id="videoSection">
+			<video id="my_video_1" class="video-js vjs-default-skin" controls
+			  preload="auto" width="640" height="264" poster="vids/DSCF1724.png"
+			  data-setup="{}">
+			  <source src="vids/fiveSecVid.mp4" type='video/mp4'>
+			  <source src="vids/fiveSecVid.webm" type='video/webm' >
+			</video>
+		</section>
+		<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- Geo Page -->
+	<div data-role="page" id="geoPage">
+		<section id="geoSection">
+		</section>
+		<div data-role="footer" data-position="fixed" data-id="home" data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	
+	
+	
+	
+
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/cordova-2.3.0.js"></script>
+	<script src="http://vjs.zencdn.net/c/video.js"></script>
+
+
+	
+</body>
+</html>
