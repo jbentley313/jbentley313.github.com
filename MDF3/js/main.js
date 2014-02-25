@@ -4,7 +4,7 @@ $(document).bind("pageinit", function(){
 	var save = $("#submit");
 	save.on("click", function(){
 		var arform = $("#addRecipeForm");
-		arform.validate({
+		
 			
 			submitHandler: function(){
 
