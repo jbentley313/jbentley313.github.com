@@ -3,7 +3,7 @@ $(document).bind("pageinit", function(){
 
 	var save = $("#submit");
 	save.on("click", function(){
-		var arform = $("#addRecipeForm");
+		
 		
 			
 			submitHandler: function(){
@@ -17,3 +17,4 @@ $(document).bind("pageinit", function(){
 
 
 		});
+	});
