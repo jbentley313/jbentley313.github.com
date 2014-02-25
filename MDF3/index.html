@@ -19,6 +19,7 @@
 	
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.css" />
 	<link rel="stylesheet" href="css/themes/scoresMDF3.min.css" />
+	<link rel="stylesheet" href="css/themes/localTheme.css" />
 	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
 
 	
@@ -31,21 +32,24 @@
 <body>
 
 	<div data-role="page" id="home" data-theme="a">
+		<div>
 
-		<form>
-			<div data-role="fieldcontain">
+			<h2>Test Score Saver</h2>
+		</div>
+		<form >
+			<div data-role="fieldcontain" class="formClass">
 				<label for="studentLastName">Student Last Name:</label>
 				<input type="text" name="studentLastName" id="studentLastName" class="required" />			
 			</div>
-			<div data-role="fieldcontain">
+			<div data-role="fieldcontain" class="formClass">
 				<label for="studentFirstName">Student First Name:</label>
 				<input type="text" name="studentFirstName" id="studentFirstName" class="required" />			
 			</div>
-			<div data-role="fieldcontain">
+			<div data-role="fieldcontain" class="formClass">
 				<label for="score">Score:</label>
 				<input type="text" name="score" id="score" class="required" />			
 			</div>
-			<div data-role="fieldcontain">
+			<div data-role="fieldcontain" class="buttonClass">
 				<input type="submit" value="Save Score" id="submit" data-theme="a"/>
 				<input type="reset" value="Reset" />			
 			</div>
