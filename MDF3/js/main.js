@@ -2,12 +2,17 @@
 $(document).bind("pageinit", function(){
 
 	var save = $("#submit");
+	
 	save.on("click", function(){
 		
-		
+		var lastName = $("#studentLastName").val();
+		var firstName = $("#studentFirstName").val();
+		var score = $("#score").val();
+
 			
-			// alert('button clicked');
-			Native.uselessMethod("My very special String");
+			alert(lastName);
+			Native.uselessMethod(lastName,firstName, score);
+
 
 
 
