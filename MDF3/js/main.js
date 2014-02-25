@@ -6,11 +6,8 @@ $(document).bind("pageinit", function(){
 		
 		
 			
-			submitHandler: function(){
-
-
-				Native.uselessMethod("My very special String");
-			}
+			// alert('button clicked');
+			Native.uselessMethod("My very special String");
 
 
 
