@@ -9,14 +9,14 @@ $(document).bind("pageinit", function(){
 		var firstName = $("#studentFirstName").val();
 		var score = $("#score").val();
 
-			
-			alert(lastName);
-			Native.uselessMethod(lastName,firstName, score);
+		
+		alert(lastName);
+		Native.uselessMethod(lastName,firstName, score);
 
 
 
 
 
 
-		});
 	});
+});
