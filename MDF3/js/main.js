@@ -3,6 +3,7 @@ $(document).bind("pageinit", function(){
 
 	var save = $("#submit");
 	
+	//save on click handler
 	save.on("click", function(){
 		
 		var lastName = $("#studentLastName").val();
@@ -10,8 +11,11 @@ $(document).bind("pageinit", function(){
 		var score = $("#score").val();
 
 		
-		alert(score);
+		alert(score + lastName + firstName);
+
+		//call method on device
 		Native.collectScore(lastName,firstName, score);
+		document.forms["addScoreForm"].reset(); 
 
 	});
 });
