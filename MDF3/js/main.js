@@ -13,10 +13,5 @@ $(document).bind("pageinit", function(){
 		alert(lastName);
 		Native.collectScore(lastName,firstName, score);
 
-
-
-
-
-
 	});
 });
