@@ -15,7 +15,7 @@ $(document).bind("pageinit", function(){
 
 		//call method on device
 		Native.collectScore(lastName,firstName, score);
-		document.forms["addScoreForm"].reset(); 
+		$["addScoreForm"].reset(); 
 
 	});
 });
