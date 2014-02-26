@@ -3,6 +3,7 @@ $(document).bind("pageinit", function(){
 
 	var save = $("#submit");
 	
+	
 	//save on click handler
 	save.on("click", function(){
 		
@@ -18,4 +19,10 @@ $(document).bind("pageinit", function(){
 		$["home"].reset(); 
 
 	});
+
+var scoresList = $("#scores");
+scoresList.on("click", function () {
+	alert("yep!");
+})
+
 });
