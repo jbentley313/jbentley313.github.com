@@ -10,7 +10,7 @@ $(document).bind("pageinit", function(){
 		var score = $("#score").val();
 
 		
-		alert(lastName);
+		alert(score);
 		Native.collectScore(lastName,firstName, score);
 
 	});
