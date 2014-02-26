@@ -11,7 +11,7 @@ $(document).bind("pageinit", function(){
 
 		
 		alert(lastName);
-		Native.uselessMethod(lastName,firstName, score);
+		Native.collectScore(lastName,firstName, score);
 
 
 
