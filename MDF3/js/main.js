@@ -23,6 +23,7 @@ $(document).bind("pageinit", function(){
 var scoresList = $("#scores");
 scoresList.on("click", function () {
 	alert("yep!");
+	Native.displayscores();
 })
 
 });
