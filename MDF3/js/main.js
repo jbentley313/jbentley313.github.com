@@ -16,9 +16,7 @@ $(document).bind("pageinit", function(){
 
 		//call method on device
 		Native.collectScore(lastName,firstName, score);
-		$("#studentLastName").val(""); 
-		$("#studentFirstName").val("");
-		$("#score").val("");
+		
 
 	});
 
