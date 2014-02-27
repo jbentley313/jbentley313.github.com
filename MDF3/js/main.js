@@ -13,7 +13,9 @@ $(document).bind("pageinit", function(){
 
 		if (lastName == "" || firstName == "" || score == "") {
 			// alert("missing");
-			Native.displayToast("Sorry, all fields required");
+
+			var msg = "Sorry, all fields required"
+			Native.displayToast(msg);
 			 
 		} else {
 			//call method on device
