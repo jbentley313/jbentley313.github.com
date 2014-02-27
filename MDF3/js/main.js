@@ -13,12 +13,12 @@ $(document).bind("pageinit", function(){
 
 		if (lastName == "" || firstName == "" || score == "") {
 			// alert("missing");
-			Native.displayToast();
+			Native.displayToast("Sorry, all fields required");
 			 
 		} else {
 			//call method on device
-		// Native.collectScore(lastName,firstName, score);
-		alert("saved");
+		Native.collectScore(lastName,firstName, score);
+		// alert("saved");
 		$["home"].reset(); 
 		}
 		
