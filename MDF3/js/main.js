@@ -11,12 +11,16 @@ $(document).bind("pageinit", function(){
 		var firstName = $("#studentFirstName").val();
 		var score = $("#score").val();
 
-		
-		alert(score + lastName + firstName);
-
-		//call method on device
+		if (lastName == "" || firstName ==" " || score == "") {
+			Native.displayToast();
+		} else {
+			//call method on device
 		Native.collectScore(lastName,firstName, score);
 		$["home"].reset(); 
+		}
+		
+
+		
 
 	});
 
