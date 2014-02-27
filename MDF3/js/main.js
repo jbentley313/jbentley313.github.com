@@ -12,10 +12,9 @@ $(document).bind("pageinit", function(){
 		var score = $("#score").val();
 
 		if (lastName == "" || firstName == "" || score == "") {
-			// alert("missing");
-
+			
 			var msg = "Sorry, all fields required";
-			Native.displayToast(msg);
+			Native.displayToast(msg.val());
 			 
 		} else {
 			//call method on device
