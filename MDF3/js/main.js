@@ -12,13 +12,10 @@ $(document).bind("pageinit", function(){
 		var score = $("#score").val();
 
 
-		alert(score + lastName + firstName);
-
+		
 		//call method on device
 		Native.collectScore(lastName,firstName, score);
-		$("#studentLastName").val("");
-		$("#studentFirstName").val("");
-		$("#score").val("");
+		$("#addScoreForm")[0].reset();
 	});
 
 var scoresList = $("#scores");
