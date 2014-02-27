@@ -11,15 +11,14 @@ $(document).bind("pageinit", function(){
 		var firstName = $("#studentFirstName").val();
 		var score = $("#score").val();
 
-
-		
 		//call method on device
 		Native.collectScore(lastName,firstName, score);
 		$("#addScoreForm")[0].reset();
 	});
 
-var scoresList = $("#scores");
-scoresList.on("click", function () {
+
+	var scoresList = $("#scores");
+	scoresList.on("click", function () {
 	// alert("display scores clicked!");
 	Native.displayScores();
 })
