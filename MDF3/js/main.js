@@ -11,12 +11,7 @@ $(document).bind("pageinit", function(){
 		var firstName = $("#studentFirstName").val();
 		var score = $("#score").val();
 
-		if (lastName == "" || firstName == "" || score == "") {
-			
-			var msg = "Sorry, all fields required";
-			Native.displayToast(msg.val());
-			 
-		} else {
+		
 			//call method on device
 		Native.collectScore(lastName,firstName, score);
 		// alert("saved");
