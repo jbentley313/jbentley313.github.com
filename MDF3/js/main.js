@@ -14,14 +14,14 @@ $(document).bind("pageinit", function(){
 		
 			//call method on device
 		Native.collectScore(lastName,firstName, score);
-		// alert("saved");
+		
 		$["home"].reset(); 
 		}
 		
 
 		
 
-	});
+	
 
 var scoresList = $("#scores");
 scoresList.on("click", function () {
